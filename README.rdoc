@@ -5,15 +5,14 @@ Adds an additional marker to issue for a custom defined date. You can choose any
 <b>Attention!!</b> This plugin extends core function!
 
 <b>Tested versions:</b>
-- 3.2.1.devel 
-- 3.1.x
+- 3.4
 
 
 == Installation
 1) go to `{REDMINE_ROOT}/plugin` directory.
 
 2) Intall:
-  git clone https://github.com/braini75/gantt_extension.git
+  git clone https://github.com/zoeeer/gantt_extension.git
 
 3) Restart the redmine service. E.g. 
   service apache2 restart

@@ -28,10 +28,10 @@ module GanttPatch
           label = "#{issue.status.name} #{issue.done_ratio}%"
           markers = !issue.leaf?
           custom_date = false
-          if Setting['plugin_gantt_extension'][:gantt_ext_enable] && !Setting['plugin_gantt_extension'][:gantt_ext_wunsch].nil?
+          if Setting['plugin_gantt_extension']['gantt_ext_enable'] && !Setting['plugin_gantt_extension']['gantt_ext_wunsch'].nil?
             markers = true          
             #custom_date_fields = issue.visible_custom_field_values.select { |x| x.custom_field.field_format == "date" }
-            custom_dates = issue.visible_custom_field_values.select { |x| x.custom_field.id == Setting['plugin_gantt_extension'][:gantt_ext_wunsch].to_i }.first
+            custom_dates = issue.visible_custom_field_values.select { |x| x.custom_field.id == Setting['plugin_gantt_extension']['gantt_ext_wunsch'].to_i }.first
             unless custom_dates.nil?
               custom_date = custom_dates.value.to_date unless custom_dates.value.nil?
             end                      
